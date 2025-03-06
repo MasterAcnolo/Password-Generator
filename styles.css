@@ -60,3 +60,11 @@ button {
   margin-bottom: 30px;
   
 }
+
+.Info{
+  display: flex;
+  margin-bottom: 10px;
+  padding-top: 260px;
+  font-style: italic;
+  font-size: small;
+}
