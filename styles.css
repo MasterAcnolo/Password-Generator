@@ -1,70 +1,267 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color:darkgray;
-    font-family: "Trebuchet MS";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+
     scroll-behavior: smooth;
+    font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(0px); /* Pas de flou par défaut */
+    transition: filter 0.5s ease-in-out; /* Animation fluide */
+    z-index: -1; /* Place en arrière-plan */
+}
+
+
+body {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    height: 100vh;            
+    margin: 0;
+
+    background-image: url('bg3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Quand on survole la boîte de login, l’arrière-plan devient flou */
+.container:hover ~ body::before {
+    filter: blur(10px); /* Applique un flou de 10px */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Garde l'effet de verre */
+    backdrop-filter: blur(5px); /* NE CHANGE PAS au survol */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body.hover::before {
+    filter: blur(3px); /* VARIABLE QUI CHANGE L'INTENSITE DE FLOU */
+    opacity: 0.8;
+}
+
+
+.generate {
+    padding: 15px 30px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .generate::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .generate:hover::after {
+    transform: scale(4);
+  }
+  
+  .generate:hover {
+    border-color: #666666;
+    background: #292929;
+  }
+  
+   /* From Uiverse.io by Mangesh636 // Modified by MasterAcnolo*/ 
+   #GitHub {
+    background: transparent;
+    
+    position: fixed; 
+    bottom: 50px;   
+    right: 20px; 
+
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(36, 41, 46);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(36, 41, 46);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    z-index: 100;
+  }
+  
+  #GitHub span {
+    margin: 10px;
+  }
+  
+  #GitHub::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+  }
+  
+  #GitHub:hover {
+    color: #fff;
+    border: 1px solid rgb(36, 41, 46);
+  }
+  
+  #GitHub:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(36, 41, 46);
   }
 
+#password{
 
-input[type="number"] {
-   width: 60px;
-
+  border-radius: 10px;
+  outline: 2px solid #e2e2e2;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #e2e2e2;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  transition: 0.25s;
 }
+#password:hover{
 
-#password {
-    margin-top: 10px;
-    width:700px;
-    display: grid;
-
-    margin-left: 250px;
-}
-
-h1{
-    position: relative;
-    margin-top: auto;
-    margin-left: 400px;    
-}
- 
-button {
-  display: block;
-  margin-top: 10px;
-  margin-left: 550px;
-  padding: 8px 16px;
-
-  background-color: #4caf50;
-  color: #fff;
-
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  
-}
-
-#longueur{
-  display: grid;
-  margin-left: 500px;
-
-}
-
-#Motdepasse{
-  display: grid;
-  margin-left: 500px;
+  outline-offset: 5px;
+  background-color: #fff
 }
 
 #length{
 
-  display: grid;
-  margin-left: 550px;
-  padding: 2px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  
+  border-radius: 10px;
+  outline: 2px solid #e2e2e2;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #e2e2e2;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  transition: 0.25s;
+}
+#length:focus{
+
+  outline-offset: 5px;
+  background-color: #fff
 }
 
-.Info{
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  width: 120px;
+  height: 45px;
+  background-color: rgb(65, 64, 64);
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.342);
+  border-radius: 5px;
+  cursor: pointer;
   display: flex;
-  margin-bottom: 10px;
-  padding-top: 260px;
-  font-style: italic;
-  font-size: small;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .5s;
+}
+
+.text {
+  color: rgb(248,248,255);
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  z-index: 2;
+}
+
+.svgIcon {
+  z-index: 2;
+}
+
+.svgIcon path {
+  fill: rgb(248,248,255);
+}
+
+.Btn:hover {
+  color: rgb(248,248,255);
+}
+
+.effect {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(248,248,255);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  transition-duration: .5s;
+}
+
+.Btn:hover .effect {
+  transform: scale(15);
+  transform-origin: center;
+  opacity: 1;
+  transition-duration: .5s;
+}
+
+.Btn:hover {
+  box-shadow: 0px 0px 5px rgb(248,248,255),
+  0px 0px 10px rgb(248,248,255),
+  0px 0px 30px rgb(248,248,255);
+  transition-duration: .7s;
+}
+
+.Btn:hover .text {
+  color: rgb(65, 64, 64);
+}
+
+.Btn:hover .svgIcon path {
+  fill: rgb(65, 64, 64);
 }

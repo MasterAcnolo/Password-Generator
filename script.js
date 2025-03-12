@@ -1,3 +1,17 @@
+
+const container = document.querySelector('.container');
+const body = document.body;
+
+container.addEventListener('mouseenter', () => {
+  body.classList.add('hover');
+});
+
+container.addEventListener('mouseleave', () => {
+  body.classList.remove('hover');
+});
+
+
+
 function generatePassword() {
     var length = document.getElementById("length").value;
     var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_=-+[]{}|;:',.<>?/";
@@ -7,3 +21,19 @@ function generatePassword() {
     }
     document.getElementById("password").value = password;
   }
+
+
+// Fonction pour copier le mot de passe
+function copyPassword() {
+  const passwordField = document.getElementById('password');
+  
+  // Sélectionne le contenu du champ de mot de passe
+  passwordField.select();
+  passwordField.setSelectionRange(0, 99999); // Pour mobile
+
+  // Copie le contenu sélectionné
+  document.execCommand('copy');
+
+  // Alert pour confirmer la copie
+  alert("Mot de passe copié !");
+}
