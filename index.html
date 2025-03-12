@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <title>Générateur de mots de passe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
 
- <link rel="stylesheet" href="styles.css">  <!-- Lien du CSS-->
- <script src="script.js"> </script> <!-- Lien du Script-->
-    
-
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js"></script>
 </head>
+
 
 <body>
 
- <h1>Générateur de mots de passe</h1>
- <label for="length" id="longueur">Longueur du mot de passe :</label>
- <input type="number" id="length" name="length" min="1" max="100" value="10">
- <button onclick="generatePassword()">Générer</button>
- <br>
- <label for="password" id="Motdepasse">Mot de passe :</label>
- <input type="text" id="password" name="password" readonly> <!--Readonly pour pas pouvoir écrire dessus-->
+    <div class="container">
+        <h1> Générateur de mot de passe </h1>
+        <label for="length" id="longueur">Longueur du mot de passe :</label>
+        <input type="number" id="length" name="length" min="1" max="100" value="10">
 
- 
+        <button onclick="generatePassword()"> Générer</button>
+        <br>
+        <label for="password" id="Motdepasse">Mot de passe :</label>
+        <input type="text" id="password" name="password" readonly> <!--Readonly pour pas pouvoir écrire dessus-->
+    </div>
 
 </body>
-
-<footer>
-
-    <div class="Info">
-    Ce programme génère simplement des chaînes de caractères, qui peuvent être utilisés à des fins de mot de passe pour certains sites. Le programme n'assure en rien la fiabilité du mot de passe mais théoriquement avoir des caractères spéciaux à différent renforcent le mot de passe. 
-    </div>
-</footer>
-
 </html>
