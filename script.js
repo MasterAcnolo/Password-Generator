@@ -10,7 +10,7 @@ container.addEventListener('mouseleave', () => {
   body.classList.remove('hover');
 });
 
-
+// Fonction pour générer des caractères de N Longueur
 
 function generatePassword() {
     var length = document.getElementById("length").value;
