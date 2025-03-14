@@ -37,3 +37,34 @@ function copyPassword() {
   // Alert pour confirmer la copie
   alert("Mot de passe copié !");
 }
+
+console.log("Navigateur : " + navigator.userAgent);
+console.log("Plateforme : " + navigator.platform);
+
+let startTime = Date.now();
+let userIP = "";
+
+// Récupérer l'IP de l'utilisateur
+fetch('https://api64.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+        userIP = data.ip;
+    })
+    .catch(error => console.error("Erreur IP :", error));
+
+// Quand l'utilisateur quitte la page
+window.addEventListener("beforeunload", () => {
+    let duration = (Date.now() - startTime) / 1000; // Convertir en secondes
+    let visitData = {
+        ip: userIP,
+        duration: duration,
+        date: new Date().toLocaleString()
+    };
+
+    // Stocker dans localStorage
+    let visits = JSON.parse(localStorage.getItem("visits")) || [];
+    visits.push(visitData);
+    localStorage.setItem("visits", JSON.stringify(visits));
+
+    console.log("Données enregistrées :", visitData);
+});
