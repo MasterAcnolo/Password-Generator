@@ -28,6 +28,6 @@ J'ai simplement voulu m'amuser à générer des caractères en JS, donc je l'ai 
 
 Une fois sur la page, rentrer dans la case **Longueur du Mot De Passe** le nombre de caractères souhaités. Puis cliquez sur **Générer**. Le programme s'éxécutera et vous redonnera ces caractères au hasard:
 
-    ``` bash
+    ```bash
     abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_=-+[]{}|;:',.<>?/
     ```
