@@ -7,7 +7,6 @@ Un simple site qui génére des chaines de caractères à la demande. Avec un bo
 - [Description](#description)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-- [Contribuer](#contribuer)
 - [Licences](#licences)
 
 ## Description
@@ -31,4 +30,11 @@ Une fois sur la page, rentrer dans la case **Longueur du Mot De Passe** le nombr
     
     abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_=-+[]{}|;:',.<>?/
 
-Il sera possible après de copier l'output avec le bouton **Copy**. Ce bouton lira ce qui est présent dans la case pour le copier dans le presse papier. Une fenêtre de dialogue s'ouvrira sur votre navigateur pour vous informer de la bonne copie des éléments !
+Il sera possible après de copier l'output avec le bouton **Copy**. Ce bouton lira ce qui est présent dans la case pour le copier dans le presse papier. Une fenêtre de dialogue s'ouvrira sur votre navigateur pour vous informer de la bonne copie des éléments ! 
+
+Libre à vous désormais de prendre mon code et de vous en inspirer pour votre utilisation. N'oubliez pas de créditer les créateurs des **assets d'UI** a savoie le **bouton GitHub** et le bouton **Copy**. 
+
+## Licences 
+
+Libre à vous d'utiliser le code provenant de ce repo. Simplement je tiens à préciser que **vinodjangid07** et **Mangesh636** ont indirectement contribué au projet en mettant en ligne leur code sur Uiverse.io . 
+
