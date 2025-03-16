@@ -31,4 +31,4 @@ Une fois sur la page, rentrer dans la case **Longueur du Mot De Passe** le nombr
     
     abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_=-+[]{}|;:',.<>?/
 
-    
+Il sera possible après de copier l'output avec le bouton **Copy**. Ce bouton lira ce qui est présent dans la case pour le copier dans le presse papier. Une fenêtre de dialogue s'ouvrira sur votre navigateur pour vous informer de la bonne copie des éléments !
